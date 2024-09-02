@@ -2,12 +2,60 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+    <link rel="stylesheet" href="style.css">
+    <title>Policlinico Los Angeles</title>
 </head>
 <body>
+    <nav>
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <img src="Policlinica.png" alt="Logo">
+                    <center><h4>Doctora María Rosa</h4></center>
+                </div>
+            </div>
+            <!-- Divs de acción -->
+            <div id="triggerDiv">
+                Formulario de Pacientes
+            </div>
+            <div id="triggerDiv1">
+                Visualizar Base de Datos de Pacientes
+            </div>
+            <div id="triggerDiv2">
+                Búsqueda de Paciente
+            </div>
+            <!--Finalizado divs de acciones -->
 
+        </div>
+    </nav>
+    <!--Ventana para ver todos los datos de base de datos -->
+    <div id="myModal">
+        <div class="content">
+            <div class="Formulario">
+                <button id="closeBtn" class="fab red">&times;</button>
+                <center><h1>Expediente Médico</h1></center>
+                <div class="form-group">
+                <div>
+                        <center>
+                            <label for="No_expediente">No de Expediente - Paciente</label>
+                            <input type="text" value="00000" disabled id="No_expediente">
+                        </center>
+                    </div>
+                <div class="form-group">
+                        <div>
+                            <label for="name">Nombre:</label>
+                            <input type="text" id="name" name="name" placeholder="María Rosa">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="renderer.js"></script>
 </body>
 </html>

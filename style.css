@@ -1,0 +1,97 @@
+/*--------------------------------------------------------------------------*/
+/*Estilo para cuerpo de programa*/
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #d79dff;
+}
+/*--------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------*/
+/*Esilo para barra lateral desde encabezados, imagenes*/
+.sidebar { /*Etiqueta de barra de navegación*/
+    width: 160px;
+    height: 100vh;
+    background-color: #ffffff;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+}
+.sidebar-header { /*Etiqueda de encabezado para logo y nombre*/
+    display: flex;
+    align-items: center;
+    padding: 2px;
+}
+.logo img {
+    width: 100%;
+    margin-right: 20px;
+}
+.interactive {
+    font-style: initial;
+    margin: 5px;
+    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+a {
+    background-color: #CACCCD;
+    cursor: pointer;
+    text-decoration: none;
+    color: #061E2A;
+}
+/*--------------------------------------------------------------------------*/
+/*Estilo para todas las funciones o menús de la barra lateral*/
+:is(#triggerDiv, #triggerDiv1, #triggerDiv2)  {
+    background-color: #CACCCD;
+    cursor: pointer;
+    text-decoration: none;
+    color: #061E2A;
+    font-style: initial;
+    margin: 5px;
+    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+/*--------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------*/
+/*Estilo de ventanas ocultas al hacer la funcion javascript se activa el style*/
+#myModal {
+    display: none; /* Oculto por defecto */
+    position: absolute ; /* Posición absoluta para que se incruste en el contenido */
+    top: 8%; /* Ajusta la posición según sea necesario */
+    left: 17%; /* Ajusta la posición según sea necesario */
+    width: 74%; /* Ajusta el ancho según sea necesario */
+    padding: 20px;
+    min-width: 580px;
+    background-color: #ffffff;
+    border: 1px solid #888;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+/* Media query para cambiar la posición del div cuando el ancho de la ventana es menor a 600px */
+@media (max-width: 1000px) {
+    #myModal {
+        top: 2%;
+        left: 23%; /* Ajusta la posición según sea necesario */
+    }
+    #myModal1 {
+        top: 2%;
+        left: 20%; /* Ajusta la posición según sea necesario */
+        width: 76%;
+    }
+    #myModal2{
+        left: 20%;
+        width: 78%;
+    }
+    #myModal2 .content {
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+
+}
+
+/*--------------------------------------------------------------------------*/
