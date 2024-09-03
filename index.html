@@ -50,7 +50,83 @@
                             <label for="name">Nombre:</label>
                             <input type="text" id="name" name="name" placeholder="María Rosa">
                         </div>
+                         <div>
+                                <label for="age">Edad:</label>
+                                 <input type="number" id="age" name="age" min="0" step="1" placeholder="24">
+                         </div>
+                </div>
+                <div class="form-group">
+                        <label for="medical_history">Antecedentes Patológicos:</label>
+                        <textarea id="medical_history" name="medical_history" placeholder="Hipertensión: Diagnosticada hace 5 años."></textarea>
+                </div>
+
+                <div class="form-group">
+                        <label for="consultation_reason">Motivo de Consulta:</label>
+                        <textarea id="consultation_reason" name="consultation_reason" placeholder="Enfermedad y sintomas dolorosos"></textarea>
+                </div>
+
+                    <div class="form-group">
+                        <label for="current_illness_history">Historia de enfermedad actual:</label>
+                        <textarea id="current_illness_history" name="current_illness_history" placeholder="Dengue hace 2 semanas"></textarea>
                     </div>
+                    <div class="form-group">
+                        <div>
+                            <label for="p_a">P/A:</label>
+                            <input type="text" id="p_a" name="vital_signs_pa" placeholder="120/80 mmHg">
+                        </div>
+                        <div>
+                            <label for="p_c">F/C:</label>
+                            <input type="text" id="p_c" name="vital_signs_fc" placeholder="75 latidos por minuto">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div>
+                            <label for="weight">Peso:</label>
+                            <input type="text" id="weight" name="weight" placeholder="145 libras">
+                        </div>
+                        <div>
+                            <label for="height">Talla:</label>
+                            <input type="text" id="height" name="height" placeholder="1.73 mtrs">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="physical_exam">Examen Físico:</label>
+                        <textarea id="physical_exam" name="physical_exam"  placeholder="Inspeccionar la piel en busca de manchas, lesiones o cambios en la pigmentación."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="diagnostics">Diagnóstico:</label>
+                        <textarea id="diagnostics" name="diagnostics" placeholder="El paciente padece de ..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="labs">Labs:</label>
+                        <textarea id="labs" name="labs" placeholder="Examen de Sangre "></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="therapeutic_plan">Plan Terapéutico:</label>
+                        <textarea id="therapeutic_plan" name="therapeutic_plan" placeholder="Medicación: Se prescribirá metformina, un medicamento oral para reducir los niveles de glucosa en sangre."></textarea>
+                    </div>
+                <div class="form-group">
+                    <center><h2>Datos de Responsable</h2></center>
+                   <div>
+                       <label for="address">Dirección:</label>
+                        <input type="text" id="address" name="address" placeholder="29 calle 2-45 zona 25">
+                   </div>
+                   <div>
+                       <label for="cell_number">Número de Teléfono:</label>
+                       <input type="text" id="cell_number" name="cell_number" placeholder="(+502) 50505050">
+                   </div>
+                   </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="next_appointment">Próxima Cita:</label>
+                    <input type="date" id="next_appointment" name="next_appointment">
+                </div>
+                <div class="form-group buttons">
+                    <button type="reset" id="reset">Resetear</button>
+                    <button type="button" id="submit">Registrar</button>
                 </div>
             </div>
 

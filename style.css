@@ -95,3 +95,27 @@ a {
 }
 
 /*--------------------------------------------------------------------------*/
+/*Estilo formulario de expedientes médicos*/
+#No_expediente {
+    background-color: transparent; /* Fondo transparente */
+    color: #333; /* Texto gris oscuro */
+    font-weight: bold; /* Texto en negrita */
+    text-align: center; /* Alinear el texto al centro */
+    border: none; /* Sin borde */
+    padding: 10px; /* Espaciado interno */
+    width: 100%; /* Ancho completo del contenedor */
+    box-sizing: border-box; /* Incluir el borde en el ancho */
+}
+.Formulario h1, h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #008080; /* Color azul verdoso médico */
+
+}
+.Formulario label {
+    display: block;
+    margin: 5px 0 2px;
+    font-weight: bold;
+    color: #343a40;
+    font-size: 14px; /* Tamaño de fuente reducido */
+}
