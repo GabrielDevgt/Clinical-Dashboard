@@ -119,3 +119,110 @@ a {
     color: #343a40;
     font-size: 14px; /* Tamaño de fuente reducido */
 }
+.Formulario input[type="text"],
+.Formulario input[type="number"],
+.Formulario input[type="date"],
+.Formulario textarea {
+    width: 100%;
+    padding: 8px; /* Tamaño de padding reducido */
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px; /* Tamaño de fuente reducido */
+}
+.Formulario textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+.Formulario .form-group > #ID {
+    color: rgba(153, 153, 153, 0.5); /* Color de texto gris muy tenue y más transparente */
+    font-style: initial; /* Estilo de fuente en cursiva */
+    font-size: large;
+}
+
+.Formulario .form-group > div {
+    flex: 1;
+    margin-right: 10px; /* Espacio entre los elementos del grupo */
+}
+
+.Formulario .form-group > div:last-child {
+    margin-right: 0; /* Quitar margen derecho del último elemento */
+}
+
+.Formulario .form-group.triple > div {
+    flex: 1 1 calc(33.33% - 10px);
+}
+.Formulario .form-group.triple > div:last-child {
+    margin-right: 0;
+}
+.form-group.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+#reset, #submit {
+    padding: 10px 40px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+/* Estilo para el botón "Reiniciar" */
+#reset {
+    background-color: #ccc;
+    color: #333;
+    margin-right: 10px;
+}
+#info {
+    background-color: #105b6b;
+    color: #ffffff;
+    margin-right: 10px;
+    border-radius: 25px;
+    padding: 10px 40px;
+    font-size: 16px;
+    border: none;
+}
+#info:hover {
+    background-color: #011b28;
+
+}
+#reset:hover {
+    background-color: #aaa;
+}
+/* Estilo para el botón "Registrar" */
+#submit {
+    background-color: #008080; /* Color azul verdoso médico */
+    color: #fff;
+}
+#submit:hover {
+    background-color: #006666;
+}
+#closeBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#closeBtn:hover {
+    background-color: #c82333;
+}
+#next_appointment {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+/*--------------------------------------------------------------------------*/
