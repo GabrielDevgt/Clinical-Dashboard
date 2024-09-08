@@ -86,6 +86,22 @@ a {
     border-radius: 10px;
     overflow-x: auto; /* Añade barras de desplazamiento horizontal si es necesario */
 }
+
+#myModal2 {
+    display: none; /* Oculto por defecto */
+    position: absolute ; /* Posición absoluta para que se incruste en el contenido */
+    top: 2%; /* Ajusta la posición según sea necesario */
+    left: 13%; /* Ajusta la posición según sea necesario */
+    width: 85%; /* Ajusta el ancho según sea necesario */
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #888;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    border-radius: 10px;
+    overflow-x: auto; /* Añade barras de desplazamiento horizontal si es necesario */
+}
+
 /* Media query para cambiar la posición del div cuando el ancho de la ventana es menor a 600px */
 @media (max-width: 1000px) {
     #myModal {
@@ -320,5 +336,90 @@ a {
 /* Estilo de las celdas de Próxima Cita */
 #patient-table tbody td:nth-child(17) {
     color: #ff0000;
+}
+/*--------------------------------------------------------------------------*/
+/* Estilos para el contenido del modal */
+#myModal2 .content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Estilos para el botón de cerrar */
+#closeBtn3  {
+    position: Fixed;
+    top: 5%;
+    left: 92%;
+    right: 20px; /* Ajuste de posición */
+    background-color: #dc3545; /* Color rojo */
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#search-submit, #search-name {
+    margin: 0;
+    padding: 0;
+    /* Otros estilos necesarios */
+}
+
+/* Estilos para el título */
+#myModal2 h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding-right: 50px; /* Añadido de espacio para el botón */
+}
+
+/* Estilos para el formulario */
+#myModal2 form {
+    margin-bottom: 20px;
+}
+
+#myModal2 .form-group {
+    margin-bottom: 15px;
+}
+
+#myModal2 label {
+    display: block;
+    font-weight: bold;
+}
+
+#myModal2 input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Estilos para el botón de búsqueda */
+#myModal2 #search-submit {
+    background-color: dodgerblue; /* Color verde */
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+#myModal2 #search-submit:hover {
+    background-color: cornflowerblue; /* Cambio de color al pasar el cursor */
+}
+
+/* Estilos para los resultados de búsqueda */
+#myModal2 #search-results {
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+/* Estilos centrados */
+.center {
+    text-align: center;
 }
 /*--------------------------------------------------------------------------*/

@@ -139,6 +139,7 @@
         </div>
     </div>
     </div>
+
     <div id="myModal1">
         <button id="closeBtn1" class="fab red">&times;</button>
         <table id="patient-table">
@@ -169,6 +170,34 @@
         </table>
 
     </div>
+
+    <div id="myModal2">
+        <div class="content">
+            <button id="closeBtn3" class="fab red">&times;</button>
+            <center><h1>Búsqueda de Paciente</h1></center>
+            <form id="search-form">
+                <div class="form-group">
+                    <label for="search-record-number">No. Expediente:</label>
+                    <input type="text" id="search-record-number" name="search-record-number" placeholder="Ingrese el número de expediente">
+                </div>
+                <div class="form-group">
+                    <label for="search-name">Nombre:</label>
+                    <input type="text" id="search-name" name="search-name" placeholder="Mario Alejandro Caballero Aguilar">
+                </div>
+                <div class="form-group buttons">
+                    <button type="reset" id="reset">Resetear</button>
+                    <button type="button" id="search-submit">Buscar</button>
+                </div>
+            </form>
+            <div id="search-results">
+                <!-- search results will be displayed here -->
+            </div>
+        </div>
+        <div id="patient-info-container" style="display: none;">
+            <!-- New patient information div content goes here -->
+        </div>
+    </div>
+
     <script src="renderer.js"></script>
 
 </body>
