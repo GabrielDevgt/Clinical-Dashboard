@@ -18,6 +18,7 @@ contextBridge.exposeInMainWorld('api', {
     },
     receive: (channel, func) => {
         let validChannels = [
+            "get-all-patients",
             "get-all-patients-reply",
             "search-patient-reply",
             "get-next-record-number-reply",

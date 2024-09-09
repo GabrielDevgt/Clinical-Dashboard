@@ -162,6 +162,49 @@ document.addEventListener("DOMContentLoaded", function (){
 
 // Evento click del botón submit
     document.getElementById('submit').addEventListener('click', savePatient);
+    function displayPatients(patients) {
+        const tableBody = document.querySelector('#patient-table tbody');
+        tableBody.innerHTML = ''; // Limpiar tabla existente
+
+        patients.forEach(patient => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+            <td>${patient.No_Expediente}</td>
+            <td>${patient.nombre}</td>
+            <td>${patient.edad}</td>
+            <td>${patient.direccion}</td>
+            <td>${patient.numero_telefono}</td>
+            <td>${patient.antecedentes_patologicos}</td>
+            <td>${patient.motivo_de_consulta}</td>
+            <td>${patient.historia_de_enfermedad_actual}</td>
+            <td>${patient.p_a}</td>
+            <td>${patient.f_c}</td>
+            <td>${patient.peso}</td>
+            <td>${patient.talla}</td>
+            <td>${patient.examen_fisico}</td>
+            <td>${patient.diagnosticos}</td>
+            <td>${patient.laboratorios}</td>
+            <td>${patient.plan_terapeutico}</td>
+            <td>${patient.proxima_cita}</td>
+        `;
+            tableBody.appendChild(row);
+        });
+    }
+
+// Añade un listener para el evento 'get-all-patients-reply'
+    window.api.receive('get-all-patients-reply', (result) => {
+        if (result.error) {
+            console.error('Error al obtener pacientes:', result.error);
+            // Maneja el error apropiadamente (por ejemplo, muestra un mensaje al usuario)
+        } else {
+            displayPatients(result);
+        }
+    });
+
+// Función para solicitar todos los pacientes
+    function requestAllPatients() {
+        window.api.send('get-all-patients');
+    }
 
 
 
@@ -183,3 +226,5 @@ window.api.receive('insert-patient-reply', (result) => {
         LimpiarCampos();
     }
 });
+
+

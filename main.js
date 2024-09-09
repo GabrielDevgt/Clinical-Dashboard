@@ -122,6 +122,26 @@ function insertPatient(patient, callback) {
             }
         });
 }
+function getAllPatients() {
+    return new Promise((resolve, reject) => {
+        db.all("SELECT * FROM patients", [], (err, rows) => {
+            if (err) {
+                reject(err);
+            } else {
+                resolve(rows);
+            }
+        });
+    });
+}
+
+ipcMain.on('get-all-patients', async (event) => {
+    try {
+        const patients = await getAllPatients();
+        event.reply('get-all-patients-reply', patients);
+    } catch (error) {
+        event.reply('get-all-patients-reply', { error: error.message });
+    }
+});
 
 function getNextRecordNumber(callback) {
     db.get('SELECT MAX(No_Expediente) AS maxRecordNumber FROM patients', (err, row) => {
@@ -151,3 +171,5 @@ ipcMain.on('get-next-record-number', (event) => {
         event.reply('get-next-record-number-reply', nextRecordNumber);
     });
 });
+
+
