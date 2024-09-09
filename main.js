@@ -87,8 +87,7 @@ app.whenReady().then(() => {
             }
         });
     }
-
-
+    createWindow();
 
     app.on('activate', () => {
         if (BrowserWindow.getAllWindows().length === 0) {
@@ -97,7 +96,6 @@ app.whenReady().then(() => {
     });
 });
 
-app.whenReady().then(createWindow);
 
 app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') {
@@ -105,8 +103,3 @@ app.on('window-all-closed', () => {
     }
 });
 
-app.on('activate', () => {
-    if (BrowserWindow.getAllWindows().length === 0) {
-        createWindow();
-    }
-});
