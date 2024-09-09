@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require("node:path");
 const fs = require('fs');
 const sqlite3 = require('sqlite3').verbose();
@@ -102,4 +102,52 @@ app.on('window-all-closed', () => {
         app.quit();
     }
 });
+function insertPatient(patient, callback) {
+    db.run(`INSERT INTO patients(nombre, edad, direccion, numero_telefono, antecedentes_patologicos, motivo_de_consulta, historia_de_enfermedad_actual, p_a, f_c, peso, talla, examen_fisico, diagnosticos, laboratorios, plan_terapeutico, proxima_cita) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+        [
+            patient.nombre, patient.edad, patient.direccion,
+            patient.numero_telefono, patient.antecedentes_patologicos,
+            patient.motivo_de_consulta, patient.historia_de_enfermedad_actual,
+            patient.p_a, patient.f_c, patient.peso, patient.talla,
+            patient.examen_fisico, patient.diagnosticos, patient.laboratorios,
+            patient.plan_terapeutico, patient.proxima_cita
+        ],
+        function(err) {
+            if (err) {
+                console.error('Error al insertar paciente:', err.message);
+                if (typeof callback === 'function') callback(err);
+            } else {
+                console.log(`Paciente insertado con éxito. ID: ${this.lastID}`);
+                if (typeof callback === 'function') callback(null, { id: this.lastID });
+            }
+        });
+}
 
+function getNextRecordNumber(callback) {
+    db.get('SELECT MAX(No_Expediente) AS maxRecordNumber FROM patients', (err, row) => {
+        if (err) {
+            console.error(err.message);
+            return;
+        }
+        const nextRecordNumber = (row.maxRecordNumber || 0) + 1;
+        callback(nextRecordNumber);
+    });
+}
+
+
+
+// Eventos IPC
+ipcMain.on('insert-patient', (event, patient) => {
+    insertPatient(patient, (err, result) => {
+        if (err) {
+            event.reply('insert-patient-reply', { error: err.message });
+        } else {
+            event.reply('insert-patient-reply', { id: result.id });
+        }
+    });
+});
+ipcMain.on('get-next-record-number', (event) => {
+    getNextRecordNumber((nextRecordNumber) => {
+        event.reply('get-next-record-number-reply', nextRecordNumber);
+    });
+});
