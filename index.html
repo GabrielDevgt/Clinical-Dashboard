@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -10,195 +10,184 @@
     <title>Policlinico Los Angeles</title>
 </head>
 <body>
-    <nav>
-        <div class="sidebar">
-            <div class="sidebar-header">
-                <div class="logo">
-                    <img src="Policlinica.png" alt="Logo">
-                    <center><h4>Doctora María Rosa</h4></center>
-                </div>
+<div id="clock"></div>
+<nav>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <img src="Policlinica.png" alt="Logo">
+                <center><h4>Doctor Maria Rosa</h4></center>
             </div>
-            <!-- Divs de acción -->
-            <div id="triggerDiv">
-                Formulario de Pacientes
-            </div>
-            <div id="triggerDiv1">
-                Visualizar Base de Datos de Pacientes
-            </div>
-            <div id="triggerDiv2">
-                Búsqueda de Paciente
-            </div>
-            <!--Finalizado divs de acciones -->
-
         </div>
-    </nav>
-    <!--Ventana para ver todos los datos de base de datos -->
-    <div id="myModal">
-        <div class="content">
-            <div class="Formulario">
-                <button id="closeBtn" class="fab red">&times;</button>
-                <center><h1>Expediente Médico</h1></center>
-                <div class="form-group">
+        <!--        <a href="pacientes.html" class="interactive">Crear Nuevo Paciente</a>-->
+        <div id="triggerDiv">
+            Formulario de Pacientes
+        </div>
+        <!-- Divs de acción -->
+        <div id="triggerDiv1">
+            Visualizar Base de Datos de Pacientes
+        </div>
+        <div id="triggerDiv2">
+            Búsqueda de Paciente
+        </div>
+    </div>
+</nav>
+<!--Ventana para ver todos los datos de base de datos -->
+<div id="myModal">
+    <div class="content">
+        <div class="Formulario">
+            <button id="closeBtn" class="fab red">&times;</button>
+            <center><h1>Expediente Médico</h1></center>
+            <div class="form-group">
                 <div>
-                        <center>
-                            <label for="No_expediente">No de Expediente - Paciente</label>
-                            <input type="text" value="00000" disabled id="No_expediente">
-                        </center>
-                    </div>
-                <div class="form-group">
-                        <div>
-                            <label for="name">Nombre:</label>
-                            <input type="text" id="name" name="name" placeholder="María Rosa">
-                        </div>
-                         <div>
-                                <label for="age">Edad:</label>
-                                 <input type="number" id="age" name="age" min="0" step="1" placeholder="24">
-                         </div>
+                    <center>
+                        <label for="No_expediente">No de Expediente - Paciente</label>
+                        <input type="text" value="00000" disabled id="No_expediente">
+                    </center>
                 </div>
-
-                <div class="form-group">
-                        <label for="medical_history">Antecedentes Patológicos:</label>
-                        <textarea id="medical_history" name="medical_history" placeholder="Hipertensión: Diagnosticada hace 5 años."></textarea>
-                </div>
-
-                <div class="form-group">
-                        <label for="consultation_reason">Motivo de Consulta:</label>
-                        <textarea id="consultation_reason" name="consultation_reason" placeholder="Enfermedad y sintomas dolorosos"></textarea>
-                </div>
-
-                <div class="form-group">
-                        <label for="current_illness_history">Historia de enfermedad actual:</label>
-                        <textarea id="current_illness_history" name="current_illness_history" placeholder="Dengue hace 2 semanas"></textarea>
-                    </div>
-
-                <div class="form-group">
-                        <div>
-                            <label for="p_a">P/A:</label>
-                            <input type="text" id="p_a" name="vital_signs_pa" placeholder="120/80 mmHg">
-                        </div>
-                        <div>
-                            <label for="p_c">F/C:</label>
-                            <input type="text" id="p_c" name="vital_signs_fc" placeholder="75 latidos por minuto">
-                        </div>
-                    </div>
-
-                <div class="form-group">
-                        <div>
-                            <label for="weight">Peso:</label>
-                            <input type="text" id="weight" name="weight" placeholder="145 libras">
-                        </div>
-                        <div>
-                            <label for="height">Talla:</label>
-                            <input type="text" id="height" name="height" placeholder="1.73 mtrs">
-                        </div>
-                    </div>
-
-                <div class="form-group">
-                        <label for="physical_exam">Examen Físico:</label>
-                        <textarea id="physical_exam" name="physical_exam"  placeholder="Inspeccionar la piel en busca de manchas, lesiones o cambios en la pigmentación."></textarea>
-                    </div>
-
-                <div class="form-group">
-                        <label for="diagnostics">Diagnóstico:</label>
-                        <textarea id="diagnostics" name="diagnostics" placeholder="El paciente padece de ..."></textarea>
-                    </div>
-
-                <div class="form-group">
-                        <label for="labs">Labs:</label>
-                        <textarea id="labs" name="labs" placeholder="Examen de Sangre "></textarea>
-                    </div>
-
-                <div class="form-group">
-                        <label for="therapeutic_plan">Plan Terapéutico:</label>
-                        <textarea id="therapeutic_plan" name="therapeutic_plan" placeholder="Medicación: Se prescribirá metformina, un medicamento oral para reducir los niveles de glucosa en sangre."></textarea>
-                    </div>
-
-                <div class="form-group">
-                    <center><h2>Datos de Responsable</h2></center>
-                   <div>
-                       <label for="address">Dirección:</label>
-                        <input type="text" id="address" name="address" placeholder="29 calle 2-45 zona 25">
-                   </div>
-                   <div>
-                       <label for="cell_number">Número de Teléfono:</label>
-                       <input type="text" id="cell_number" name="cell_number" placeholder="(+502) 50505050">
-                   </div>
-                   </div>
-
-                <div class="form-group">
-                    <label for="next_appointment">Próxima Cita:</label>
-                    <input type="date" id="next_appointment" name="next_appointment">
-                </div>
-
-                <div class="form-group buttons">
-                    <button type="reset" id="reset">Resetear</button>
-                    <button type="button" id="submit">Registrar</button>
-                </div>
-
             </div>
-        </div>
-    </div>
-    </div>
-
-    <div id="myModal1">
-        <button id="closeBtn1" class="fab red">&times;</button>
-        <table id="patient-table">
-            <thead>
-            <tr>
-                <th>No. Expediente</th>
-                <th>Nombre</th>
-                <th>Edad</th>
-                <th>Antecedentes Patológicos</th>
-                <th>Motivo de Consulta</th>
-                <th>Historia de enfermedad actual</th>
-                <th>P/A</th>
-                <th>F/C</th>
-                <th>Peso</th>
-                <th>Talla</th>
-                <th>Examen Físico</th>
-                <th>Diagnósticos</th>
-                <th>Labs</th>
-                <th>Plan Terapéutico</th>
-                <th>Dirección</th>
-                <th>Número de Teléfono</th>
-                <th>Próxima Cita</th>
-            </tr>
-            </thead>
-            <tbody>
-            <!-- Aquí se agregarán las filas con los datos de los pacientes -->
-            </tbody>
-        </table>
-
-    </div>
-
-    <div id="myModal2">
-        <div class="content">
-            <button id="closeBtn3" class="fab red">&times;</button>
-            <center><h1>Búsqueda de Paciente</h1></center>
-            <form id="search-form">
-                <div class="form-group">
-                    <label for="search-record-number">No. Expediente:</label>
-                    <input type="text" id="search-record-number" name="search-record-number" placeholder="Ingrese el número de expediente">
+            <div class="form-group">
+                <div>
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" placeholder="Mario Alejandro Caballero Aguilar">
                 </div>
-                <div class="form-group">
-                    <label for="search-name">Nombre:</label>
-                    <input type="text" id="search-name" name="search-name" placeholder="Mario Alejandro Caballero Aguilar">
-                </div>
-                <div class="form-group buttons">
-                    <button type="reset" id="reset">Resetear</button>
-                    <button type="button" id="search-submit">Buscar</button>
-                </div>
-            </form>
-            <div id="search-results">
-                <!-- search results will be displayed here -->
             </div>
-        </div>
-        <div id="patient-info-container" style="display: none;">
-            <!-- New patient information div content goes here -->
+            <div class="form-group">
+                <div>
+                    <label for="age">Edad:</label>
+                    <input type="number" id="age" name="age" min="0" step="1" placeholder="24">
+                </div>
+                <div>
+                    <label for="address">Dirección:</label>
+                    <input type="text" id="address" name="address" placeholder="29 calle 2-45 zona 25">
+                </div>
+                <div>
+                    <label for="cell_number">Número de Teléfono:</label>
+                    <input type="text" id="cell_number" name="cell_number" placeholder="(+502) 50505050">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="medical_history">Antecedentes Patológicos:</label>
+                <textarea id="medical_history" name="medical_history" placeholder="Hipertensión: Diagnosticada hace 5 años."></textarea>
+            </div>
+            <div class="form-group">
+                <label for="consultation_reason">Motivo de Consulta:</label>
+                <textarea id="consultation_reason" name="consultation_reason" placeholder="Enfermedad y sintomas dolorosos"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="current_illness_history">Historia de enfermedad actual:</label>
+                <textarea id="current_illness_history" name="current_illness_history" placeholder="Dengue hace 2 semanas"></textarea>
+            </div>
+            <div class="form-group">
+                <div>
+                    <label for="p_a">P/A:</label>
+                    <input type="text" id="p_a" name="vital_signs_pa" placeholder="120/80 mmHg">
+                </div>
+                <div>
+                    <label for="p_c">F/C:</label>
+                    <input type="text" id="p_c" name="vital_signs_fc" placeholder="75 latidos por minuto">
+                </div>
+            </div>
+            <div class="form-group">
+                <div>
+                    <label for="weight">Peso:</label>
+                    <input type="text" id="weight" name="weight" placeholder="145 libras">
+                </div>
+                <div>
+                    <label for="height">Talla:</label>
+                    <input type="text" id="height" name="height" placeholder="1.73 mtrs">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="physical_exam">Examen Físico:</label>
+                <textarea id="physical_exam" name="physical_exam"  placeholder="Inspeccionar la piel en busca de manchas, lesiones o cambios en la pigmentación."></textarea>
+            </div>
+            <div class="form-group">
+                <label for="diagnostics">Diagnóstico:</label>
+                <textarea id="diagnostics" name="diagnostics" placeholder="El paciente padece de ..."></textarea>
+            </div>
+            <div class="form-group">
+                <label for="labs">Labs:</label>
+                <textarea id="labs" name="labs" placeholder="Examen de Sangre "></textarea>
+            </div>
+            <div class="form-group">
+                <label for="therapeutic_plan">Plan Terapéutico:</label>
+                <textarea id="therapeutic_plan" name="therapeutic_plan" placeholder="Medicación: Se prescribirá metformina, un medicamento oral para reducir los niveles de glucosa en sangre."></textarea>
+            </div>
+            <div class="form-group">
+                <label for="next_appointment">Próxima Cita:</label>
+                <input type="date" id="next_appointment" name="next_appointment">
+            </div>
+            <div class="form-group buttons">
+                <button type="reset" id="reset">Resetear</button>
+                <button type="button" id="submit">Registrar</button>
+            </div>
+            <div id="error-message" class="hidden"></div>
+            <!-- Mensaje de éxito -->
+            <div id="success-message" class="alert hidden">
+                <span class="close-btn"></span>
+                <p>¡Paciente registrado con éxito!</p>
+            </div>
+
         </div>
     </div>
+</div>
+<div id="myModal1">
+    <button id="closeBtn1" class="fab red">&times;</button>
+    <table id="patient-table">
+        <thead>
+        <tr>
+            <th>No. Expediente</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Dirección</th>
+            <th>Número de Teléfono</th>
+            <th>Historial Médico</th>
+            <th>Motivo de Consulta</th>
+            <th>Historia de enfermedad actual</th>
+            <th>P/A</th>
+            <th>F/C</th>
+            <th>Peso</th>
+            <th>Talla</th>
+            <th>Examen Físico</th>
+            <th>Diagnósticos</th>
+            <th>Labs</th>
+            <th>Plan Terapéutico</th>
+            <th>Próxima Cita</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Aquí se agregarán las filas con los datos de los pacientes -->
+        </tbody>
+    </table>
 
-    <script src="renderer.js"></script>
-
+</div>
+<div id="myModal2">
+    <div class="content">
+        <button id="closeBtn3" class="fab red">&times;</button>
+        <center><h1>Búsqueda de Paciente</h1></center>
+        <form id="search-form">
+            <div class="form-group">
+                <label for="search-record-number">No. Expediente:</label>
+                <input type="text" id="search-record-number" name="search-record-number" placeholder="Ingrese el número de expediente">
+            </div>
+            <div class="form-group">
+                <label for="search-name">Nombre:</label>
+                <input type="text" id="search-name" name="search-name" placeholder="Mario Alejandro Caballero Aguilar">
+            </div>
+            <div class="form-group buttons">
+                <button type="reset" id="reset">Resetear</button>
+                <button type="button" id="search-submit">Buscar</button>
+            </div>
+        </form>
+        <div id="search-results">
+            <!-- search results will be displayed here -->
+        </div>
+    </div>
+    <div id="patient-info-container" style="display: none;">
+        <!-- New patient information div content goes here -->
+    </div>
+</div>
+<script src="renderer.js"></script>
 </body>
 </html>
